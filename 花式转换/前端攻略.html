@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>前端攻略</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		body{
+			background-color: #663366;
+			background-image: radial-gradient(600px 300px at center,#ccffff 60%,#663366 100%);
+			background-repeat: no-repeat;
+		}
+		.con{
+			position: relative;
+			width: 800px;
+			height: 200px;
+			margin: 220px auto;
+			/*border: 2px solid red;*/
+			font-size: 150px;
+			text-align: center;
+		}
+		.content1{
+			position: absolute;
+			color: #ccc;
+			margin-left: 50px;
+		}
+		.content1 span{
+			display: inline-block;
+			transform-origin: left;
+			-webkit-transform-origin: left;
+			transition: transform 1s linear;
+		}
+		.con:hover .content1 span{
+			transform: skewY(20deg);
+		}
+		.content2{
+			position: absolute;
+			color: #000;
+			text-align: center;
+			transform-origin: left;
+			-webkit-transform-origin: left;
+			transform: translateX(4px);
+			margin-left: 50px;
+		}
+		.content3{
+			position: absolute;
+			color: #fff;
+			margin-left: 50px;
+		}
+		.content3 span{
+			display: inline-block;
+			transform-origin: left;
+			-webkit-transform-origin: left;
+			transition: transform 1s linear;
+		}
+		.con:hover .content3 span{
+			transform: rotateY(40deg) skewY(5deg);
+		}
+	</style>
+</head>
+<body>
+	<div class="con">
+		<div class="content1">
+			<span>前</span>
+			<span>端</span>
+			<span>攻</span>
+			<span>略</span>
+		</div>
+		<div class="content2">
+			<span>前</span>
+			<span>端</span>
+			<span>攻</span>
+			<span>略</span>
+		</div>
+		<div class="content3">
+			<span>前</span>
+			<span>端</span>
+			<span>攻</span>
+			<span>略</span>
+		</div>
+		</div>
+</body>
+</html>
