@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>火箭发射</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/火箭.css">
+	<meta name="keyname" content="火箭,火箭发射">
+    <meta name="description" content="火箭发射">
+    <meta name="author" content="梁植林">
+</head>
+<body>
+	<div class="scene">
+		<div class="rocket">
+			<img src="images/rocket.png">
+		</div>
+	</div>
+	<form>
+		<button class="button">发射</button>
+	</form>
+	<script type="text/javascript">
+		function stars(){
+			let count = 20;
+			let scene = document.querySelector('.scene');
+			let i = 0;
+			while(i < count){
+				let star = document.createElement('i');
+				let x = Math.floor(Math.random() * window.innerWidth);
+
+				let duration = Math.random() * 1;
+				let h = Math.random() * 100;
+
+				star.style.left = x + 'px';
+				star.style.width = 1 + 'px';
+				star.style.height = 50+ h + 'px';
+				star.style.animationDuration = duration + 's';
+				
+				scene.appendChild(star);
+				i++
+			}
+		}
+		stars();
+	</script>
+</body>
+</html>
