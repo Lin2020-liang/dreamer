@@ -1,0 +1,96 @@
+	body{
+			padding: 0;
+			margin: 0;
+			background: url("../images/bg.jpg") repeat;
+			overflow-x: hidden;
+		}
+		.box1{
+			position: absolute;
+			top: 100px;
+			width: 516px;
+			height: 270px;
+			background: url("../images/shark2.png") left top;
+			animation: yellowshark 1s steps(8) infinite,
+					   animate1 10s linear infinite;
+		}
+		@keyframes yellowshark{
+			0%{
+				
+			}
+			100%{
+				background-position: left -2184px;
+			}
+		}
+		@keyframes animate1{
+			0% {
+			    transform: translateX(-600px);
+			}
+			100% {
+			    transform: translateX(2000px);
+			}
+		}
+		.box2{
+			position: absolute;
+			top: 60%;
+			right: 0;
+			width: 509px;
+			height: 270px;
+			background: url("../images/shark1.png") left top;
+			animation: blueshark 1s steps(8) infinite,
+					   animate2 8s linear infinite;
+		}
+		@keyframes blueshark{
+			0%{
+				
+			}
+			100%{
+				background-position: right -2160px;
+			}
+		}
+		@keyframes animate2{
+			0%{
+				transform: rotate(180deg) translateX(-600px);
+			}
+			100%{
+				transform: rotate(180deg) translateX(2000px);
+			}
+		}
+		.box3{
+			position: absolute;
+			top: 200px;
+			left: 0;
+			width: 174px;
+			height: 120px;
+			background: url("../images/fish8.png") left top;
+			animation: fish 1s steps(8) infinite,
+					   animate3 10s linear infinite;
+		}
+		@keyframes fish{
+			0%{
+				
+			}
+			100%{
+				background-position: right -1010px;
+			}
+		}
+		@keyframes animate3{
+			0% {
+			}
+			15% {
+			    transform: translate(800px,0px) rotate(45deg);
+			}
+			50% {
+			    transform: translate(800px,300px) rotate(135deg);
+			}
+			75% {
+			    transform: translate(100px,300px) rotate(235deg);
+			}
+			100% {
+			    transform: translate(0px,0px) rotate(360deg);
+			}
+		}
+		video{
+			position: fixed;
+			width: 100%;
+			/*height: 100%;*/
+		}
