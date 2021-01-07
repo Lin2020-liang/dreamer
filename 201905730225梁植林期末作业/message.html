@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>感言发表</title>
+    <meta charset="UTF-8">
+    <meta name="keyname" content="建党99周年,祝愿党的99岁生日,我有话想对亲爱的共产党说,真心话">
+    <meta name="description" content="感言发表">
+    <meta name="author" content="梁植林">
+    <link rel="icon" type="image/x-icon" href="images/icon.ico">
+    <link rel="stylesheet" href="css/message.css">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<!-- 图片区 -->
+	<div id="header">
+		<div class="tips_text"></div>
+		<div class="about_animate">
+		<div class="loader">
+			<div class="ball"></div>
+		</div>
+	</div>
+</div>
+
+   <!-- 表单区 -->
+	<section>
+		<div class="imgBx">
+      <img src="images/messagebg.png">
+    </div>
+    <div class="contentBx">
+      <div class="formBx">
+        <h2>感言发表</h2>
+        <form>
+          <div class="inputBox">
+				<input type="text" name="" required="required">
+				<span>账户</span>
+			</div>
+			<div class="inputBox">
+				<input type="password" name="" required="required">
+				<span>密码</span>
+			</div>
+			<div class="inputBox">
+				<input type="email" name="" required="required">
+				<span>邮箱</span>
+			</div>
+			<div class="inputBox" style="margin-top: 0;width: 300px;height: 50px;">
+				<textarea placeholder="请留下您的感言" rows="4" cols="10"></textarea>
+			</div>
+          <div class="remember">
+            <label><input type="checkbox" name="">记住密码</label>
+          </div>
+          <div class="inputBx">
+            <input type="submit" value="提交">
+          </div>
+          <div class="inputBx">
+            <p>没有账户? <a href="#">注册</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+	</section>
+
+	<!-- 返回首页部分 -->
+	<a data-name="返回首页" id="scrollUp" href="index.html" style="position: fixed; z-index: 2147483647; display: block;"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+
+	<script type="text/javascript">
+		var bg = document.getElementById("header")
+		window.addEventListener("scroll", function(){
+			bg.style.opacity = 1 - +window.pageYOffset/700+'';
+			bg.style.backgroundSize = 160 - +window.pageYOffset/12+"%";
+		})
+	</script>
+</body>
+</html>

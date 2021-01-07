@@ -1,0 +1,889 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+ol,ul{
+	list-style-type: none;
+}
+a{
+	color: #666;
+	text-decoration: none;
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+
+.fade{
+	opacity: 0;
+}
+
+#index_nav,#themeshow,#story,#world,#serve,#after_sale,#footer{
+	height: 100px;
+	width: 100%;
+}
+
+/*导航栏部分*/
+		#index_banner img{
+			width: 1260px;
+			height: 400px;
+		}
+		#index_nav{
+	        position: relative;
+	        width: 100%;
+	        height: 115PX;
+	        left: 50%;
+	        top: 0PX;
+	        transform: translateX(-50%);
+	        background-color: rgb(154,0,0);
+      }
+    	#index_nav>.index_container {
+        width: 1134px;
+        height: 113px;
+        margin: 0 auto;
+        border-radius: 16px;
+        background-color: rgb(154,0,0);
+      }
+     #index_nav>.index_container ul a {
+        text-decoration: none;
+        color: #ffffff;
+      }
+      /* Utility classes */
+      .reset-position {
+        top: 0;
+        left: 0;
+      }
+      .align-v {
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+      }
+      .align-h {
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+      }
+      .align-vh {
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+      }
+      /* Main style */
+      #index_nav .index_navigation:after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+      #index_nav .index_navigation li {
+        list-style: none;
+        float: left;
+        display: inline-block;
+        margin: 16px;
+      }
+      #index_nav .index_navigation li a {
+        display: block;
+        width: 130px;
+        height: 80px;
+        border-radius: 12px;
+        line-height: 80px;
+        position: relative;
+        text-align: center;
+        background-color: #663333;
+        overflow: hidden;
+        z-index: 1;
+      }
+      #index_nav .index_navigation li a i {
+        display: block;
+        position: absolute;
+        font-size: 35px;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -webkit-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+      }
+      #index_nav .index_navigation li a span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        opacity: 0;
+        font-size: 16px;
+        font-weight: 700;
+        -webkit-transition: all 0.25s 0.125s ease;
+        -ms-transition: all 0.25s 0.125s ease;
+      }
+      #index_nav .index_navigation li a:hover.to.bottom i {
+        -webkit-transform: translate(-50%, 80px);
+        -ms-transform: translate(-50%, 80px);
+      }
+      #index_nav .index_navigation li a:hover.to.top i {
+        -webkit-transform: translate(-50%, -80px);
+        -ms-transform: translate(-50%, -80px);
+      }
+      #index_nav .index_navigation li a:hover.to.left i {
+        -webkit-transform: translate(-100px, -50%);
+        -ms-transform: translate(-100px, -50%);
+      }
+      #index_nav .index_navigation li a:hover.to.right i {
+        -webkit-transform: translate(80px, -50%);
+        -ms-transform: translate(80px, -50%);
+      }
+      #index_nav .index_navigation li a:hover i {
+        -webkit-transform: translate(-50%, 80px);
+        -ms-transform: translate(-50%, 80px);
+        color: rgba(255, 255, 255, 0.4);
+      }
+      #index_nav .index_navigation li a:hover span {
+        opacity: 1;
+      }
+
+
+/*主图展示部分*/
+#themeshow{
+	height: 700px;
+	background-color: #F2F2F2;
+}
+#themeshow .themeshow_top{
+	text-align: center;
+	margin: 10px;
+}
+#themeshow .themeshow_container{
+	position: relative;
+}
+#themeshow .themeshow_container ul{
+	width: 1263px;
+	margin: 10px auto;
+}
+#themeshow .themeshow_container li{
+	width: 300px;
+	float: left;
+	border-bottom: 4px solid #DFDFDF;
+	transition: all .3s;
+}
+#themeshow .themeshow_container li:hover{
+	border-bottom: 4px solid #dc143c;
+	transform: translateY(-10px);
+}
+#themeshow .themeshow_container li img{
+	width: 300px;
+}
+#themeshow .themeshow_container li h2{
+	text-align: center;
+	margin-top: 10px;
+}
+#themeshow .themeshow_container li:hover h2{
+	color: #dc143c;
+}
+#themeshow .themeshow_container li p{
+	text-align: center;
+	margin: 10px 0px; 
+	font-size: 16px;
+	color: #808080;
+}
+#themeshow .themeshow_container li:hover p{
+	color: #dc143c;
+}
+#themeshow .themeshow_container .bottext{
+	color: #dc143c;
+	font-size: 14px;
+}
+#themeshow .themeshow_container li:hover .bottext{
+	color: #808080;
+}
+#themeshow .themeshow_container .line{
+	width: 0px;
+	height: 500px;
+	border-left: 1px solid #EAEAEA;
+	margin: 0px 10px;
+}
+#themeshow .themeshow_container .imagebox{
+	position: relative;
+    overflow: hidden;
+}
+#themeshow .themeshow_container .imagebox>img{
+	 width: 100%;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    transition: all .4s ease;
+}
+
+#themeshow .themeshow_container .imageboxchild1:before,
+#themeshow .themeshow_container .imageboxchild2:before,
+#themeshow .themeshow_container .imageboxchild3:before,
+#themeshow .themeshow_container .imageboxchild4:before{
+    position: absolute;
+    background: linear-gradient(#a52a2a, #b8860b);
+    opacity: .8;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    color: rgba(255,255,255,0.8);
+    font-size: 35px;
+    text-align: center;
+    padding-top: 160px;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    transition-duration: .5s;
+    transition-timing-function: ease-out;
+}
+#themeshow .themeshow_container .imageboxchild1:before{
+	content: '九十九年沧海桑田九十九年风风雨雨';
+}
+#themeshow .themeshow_container .imageboxchild2:before{
+	content: '九十九年曲折探索九十九年腾飞跨越';
+}
+#themeshow .themeshow_container .imageboxchild3:before{
+	content: '九十九年同舟共济九十九年众志成城';
+}
+#themeshow .themeshow_container .imageboxchild4:before{
+	content: '谨以中华儿女赤子之情恭祝党的九十九华诞';
+}
+#themeshow .themeshow_container li:hover .imagebox:before{
+	 -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+
+/*图片展示部分*/
+.bird-left{
+	position: absolute;
+	left: -100px;
+}
+.bird-right{
+	position: absolute;
+	right: -100px;
+}
+
+.containerpic-show
+{
+    position: relative;
+	box-sizing: border-box;
+    width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    perspective: 500px;
+    min-height: 320px;
+}
+.containerpic-show .box-show
+{
+    position: relative;
+    margin: 10px auto;
+    width: 275px;
+    height: 275px;
+    background: #ccc;
+    overflow: hidden;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+}
+.containerpic-show:hover .box-show
+{
+    transform: rotateY(25deg);
+    -ms-transform: rotateY(25deg);
+}
+.containerpic-show .box-show:hover ~ .box-show
+{
+    transform: rotateY(-25deg);
+    -ms-transform: rotateY(-25deg);
+}
+.containerpic-show .box-show:hover
+{
+    transform: scale(1.25) rotateY(0deg);
+    -ms-transform: scale(1.25) rotateY(0deg);
+    z-index: 1;
+    box-shadow: 0 25px 40px rgba(0,0,0,.5);
+}
+.containerpic-show .box-show .imgBx
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.containerpic-show .box-show .imgBx:before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg,#f00,#000);
+    z-index: 1;
+    mix-blend-mode: multiply;/*该属性ie浏览器不支持*/
+    opacity: 0;
+    transition: 0.5s;
+    -ms-transition: 0.5s;
+}
+.containerpic-show .box-show:hover .imgBx:before
+{
+    opacity: 1;
+}
+#containerpic-show_title{
+	text-align: center;
+	margin-top: 30px;
+}
+.containerpic-show .box-show .imgBx img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.containerpic-show .box-show .content-show
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    padding: 20px;
+    align-items: flex-end;/*与交叉轴终点对齐*/
+}
+.containerpic-show .box-show .content-show h2
+{
+    color: #fff;
+    transform: translateY(100px);
+    -webkit-transform: translateY(100px);
+    -ms-transform: translateY(100px);
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -ms-transition: 0.5s;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+.containerpic-show .box-show .content-show p
+{
+    color: #fff;
+    transform: translateY(200px);
+    -webkit-transform: translateY(200px);
+    -ms-transform: translateY(200px);
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -ms-transition: 0.5s;
+    font-size: 14px;
+}
+.containerpic-show .box-show:hover .content-show h2
+{
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transition-delay: 0.6s;
+    -webkit-transition-delay: 0.6s;
+    -ms-transition-delay: 0.6s;
+}
+.containerpic-show .box-show:hover .content-show p
+{
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transition-delay: 0.7s;
+    -webkit-transition-delay: 0.7s;
+    -ms-transition-delay: 0.7s;
+}
+
+
+
+/*红色记忆与党史学习部分*/
+#story{
+	height: 950px;
+	background-color: #F6F6F6;
+	overflow: hidden;
+}
+
+#story .story_top{
+	text-align: center;
+	margin: 20px 0px;
+}
+
+#story .story_main{
+	width: 1090px;
+	margin: 5px auto;
+}
+#story .story_left{
+	width: 540px;
+	height: 950px;
+}
+#story .story_left>div{
+	float: left;
+	border-bottom: 3px solid #EAEAEA;
+	margin: 10px;
+	transition: all .3s;
+}
+#story .story_left>div:hover{
+	transform: translateY(-10px);
+}
+#story .story_left img{
+	width: 250px;
+}
+#story .story_left>div:last-child img{
+	width: 520px;
+}
+#story .story_all{
+	width: 250px;
+	height: 250px;
+	border: 3px solid #EAEAEA;
+	background-color: #fff;
+	padding: 20px;
+	box-sizing: border-box;
+}
+#story .story_all p:first-child{
+	text-align: center;
+	font-weight: bold;
+	font-size: 14px;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 10px;
+}
+#story .story_all li{
+	float: left;
+	width: 50px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+}
+#story .story_all:hover li{
+	color: #dc143c;
+}
+#story .story_all .story_line{
+	width: 150px;
+	height: 0;
+	border-top: 1px solid #ccc;
+	clear: both;
+	margin: 15px auto;
+}
+#story .story_all p:last-child{
+	text-align: center;
+	transition: all .5s linear;
+}
+#story .story_all:hover p:last-child{
+	color: #dc143c;
+	font-size: 18px;
+	transition: all .5s linear;
+}
+#story .story_right{
+	width: 540px;
+}
+#story .story_right div{
+	float: left;
+	margin: 10px;
+	border-bottom: 3px solid #EAEAEA;
+	transition: all .3s;
+}
+#story .story_right div:hover{
+	transform: translateY(-10px);
+}
+#story .story_right img{
+	width: 250px;
+}
+#story .story_right div:first-child img{
+	width: 520px;
+	height: 250px;
+}
+#story .story_right div:last-child img{
+	height: 241px;
+}
+.boxborder::before,
+.boxborder::after { 
+	content: ''; 
+	box-sizing: inherit; 
+	position: absolute; 
+	border: 3px solid transparent; 
+	width: 0; 
+	height: 0;
+}
+.boxborder::after { 
+	bottom: 0; 
+	right: 0;
+}
+.boxborder::before { 
+	top: 0; 
+	left: 0;
+}
+.boxborder:hover::before, 
+.boxborder:hover::after { 
+	width: 100%; 
+	height: 100%;
+}
+.boxborder:hover::before { 
+	border-top-color: red; 
+	border-right-color: red; 
+	transition: width 0.3s ease-out, 
+				height 0.3s ease-out 0.3s;
+}
+.boxborder:hover::after { 
+	border-bottom-color: #ffd700; 
+	border-left-color: #ffd700; 
+	transition: border-color 0s ease-out 0.6s, 
+				width 0.3s ease-out 0.6s, 
+				height 0.3s ease-out 1s; 
+}
+
+
+/*时代楷模部分*/
+.titlebox3{
+	text-align: center;
+}
+.bigbox{
+   width: 908px;
+   height: 280px;
+   margin: 30px auto;
+}
+.wrap{
+	overflow: hidden;
+	width: 1156px;
+	height: 280px;
+	margin: 0PX auto;
+}
+.list{
+	overflow: hidden;
+	position: relative;
+	float: left;
+	width: 150px;
+	height: 280px;
+	border-left: 1px solid #fff;
+	background: #00a0ea;
+	transition: 1s;
+}
+    .bigbox>.wrap .contant{
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 27px 0;
+      width: 906px;
+    }
+.list-box{
+	float: left;
+	border: 1px solid #fff;
+	margin-left: 20px; 
+	padding: 5px;
+}
+.contant .list-box img{
+	width: 119px;
+	height: 160px;
+}
+.list-title{
+   font-size: 20px;
+	background: rgba(0,0,0,0.5);
+	color: #fff;
+	text-align: center;
+}
+.wrap_top,.wrap_bot{
+	position: absolute;
+	width: 100%;
+	height: 280px;
+	background: rgba(0,0,0,0.5);
+	text-align: center;
+	color: #fff;
+	line-height: 280px;
+	transition: 1s;
+}
+.wrap_top{
+	top: 0;
+}
+.wrap_bot{
+	bottom: 0;
+}
+.wrap:hover .list{
+	width: 25px;
+}
+.wrap .list:hover{
+	width: 980px;
+}
+.list:hover .wrap_top, .list:hover .wrap_bot{
+	height: 25px;
+	line-height: 25px;
+}
+
+
+/*光辉历程部分*/
+#world{
+	height: 700px;
+	/*clear: both;*/
+	overflow: hidden;
+	background-color: #EAEAEA;
+}
+#world .world_top{
+
+	text-align: center;
+	margin: 20px 0px;
+}
+#world .world_main{
+	width: 1214px;
+	margin: 10px auto;
+}
+#world .world_left{
+	width: 800px;
+}
+#world .world_left>div{
+	float: left;
+	margin: 10px;
+	
+}
+#world .world_left>div img{
+	width: 380px;
+	height: 270px;
+	
+}
+.member-img{
+	 text-align: center;
+     font-size: 25px;
+     color: #fff;
+}
+	.memberchild1:before,
+	.memberchild2:before,
+	.memberchild3:before,
+	.memberchild4:before{
+	background: rgba(0, 0, 0, .6);
+     position: absolute;
+     line-height: 270px;
+     left: 20px;
+     right: 20px;
+     top: 20px;
+     bottom: 20px;
+     -webkit-transition: all .3s;
+     transition: all .3s;
+     visibility: hidden;
+     opacity: 0;
+     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";/*滤镜*/
+     -webkit-transform: scale(0);
+     transform: scale(0);
+}
+.memberchild1:before {
+     content:'新民主主义革命时期';
+     
+}
+.memberchild2:before {
+     content:'社会主义建设时期';
+     
+}
+.memberchild3:before {
+     content:'改革开放时期';
+    
+}
+.memberchild4:before {
+     content:'新时代潮流发展时期';
+    
+}
+.single-member:hover .member-img:before{
+ visibility: visible;
+ opacity: 1;
+ -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+ -webkit-transform: scale(1);
+ transform: scale(1);
+}
+#world .world_left>div>div{
+	border-bottom: 3px solid #EAEAEA;
+	transition: all .3s;
+}
+#world .world_left>div:hover div{
+	border-bottom: 3px solid #dc143c;
+	transform: translateY(-10px);
+}
+#world .world_right{
+	width: 400px;
+	height: 566px;
+	background-color: #fff;
+	margin-top: 10px;
+}
+#world .world_right img{
+	height: 100px;
+	width: 120px;
+}
+#world .world_right .world_title{
+	height: 60px;
+}
+#world .world_right .world_title div{
+	width: 200px;
+	height: 60px;
+	background-color: #EAEAEA;
+	text-align: center;
+	line-height: 60px;
+	float: left;
+	border-top: 3px solid #EAEAEA;
+}
+#world .world_right .world_title div:first-child{
+	border-top: 3px solid #dc143c;
+	background-color: #fff;
+}
+#world .world_right  ul li{
+	background-color: #EAEAEA;
+	margin: 20px 10px;
+}
+#world .world_right dl{
+	width: 380px;
+	height: 100px;
+	position: relative;
+	box-sizing: border-box;
+	background: linear-gradient(to right,red 50%,#ccc 50%);
+	background-size: 200% 100%;
+	background-position: right bottom;
+	transition: all 1s ease;
+}
+#world .world_right dl:hover{
+	background-position: left bottom;
+}
+#world .world_right dl dt{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+#world .world_right dl dd{
+	position: absolute;
+	top: 20px;
+	left: 140px;
+}
+
+/*页面的底部*/
+footer{
+	position: relative;
+	width: 100%;
+	height: 600px;
+	background-color: #2D2D2D;
+	margin: 30px auto;
+}
+footer .footer-left,
+footer .footer-right{
+	/*position: absolute;*/
+	width: 50%;
+	height: 100%;
+	float: left;
+	background-color: rgb(23,53,79);
+}
+footer .footer-left img{
+	width: 100%;
+	height: 100%;
+}
+footer .footer-left .footer-left_text{
+	position: absolute;
+	width: 50%;
+	height: 200px;
+	text-align: left;
+	/*background-color: rgba(255,0,0,0.85);*/
+	background: linear-gradient(120deg,#a52a2a 65%, #b88600);
+	bottom: 0;
+}
+footer .footer-left .footer-left_text span{
+	font-size: 30px;
+	display: inline-block;
+	margin-left: 20px;
+	margin-top: 20px;
+	color: #fff;
+}
+footer .footer-left .footer-left_text span:first-letter{
+	color: #000;
+	font-size: 45px;
+	font-weight: 700;
+}
+footer .footer-right .footer-right_title{
+	margin-left: 70px;
+	margin-top: 80px;
+}
+footer .footer-right .footer-right_title p{
+	font-size: 30px;
+	color: #fff;
+	margin-bottom: 20px;
+}
+footer .footer-right .footer-right_title h2{
+	color: white;
+	font-size: 45px;
+}
+footer .footer-right p{
+	margin-left: 70px;
+	margin-top: 50px;
+	color: #CFC1E5;
+	font-size: 16px;
+	font-weight: 600;
+}
+footer .footer-right .btn{
+	line-height: 60px;
+	font-size: 30px;
+	font-weight: 600;
+	color: #fff;
+	width: 200px;
+	height: 80px;
+	text-decoration: none;
+	margin-top: 80px;
+	margin-left: 70px;
+	transition: all .4s ease;
+}
+footer .footer-right .btn:hover{
+	color: #35c5af;
+	background-color: #fff;
+	box-shadow: 5px 5px 80px gold;
+
+}
+
+/*返回顶部部分*/
+#scrollUp {
+    background: #f56970;
+    bottom: 50px;
+    color: #fff;
+    height: 50px;
+    line-height: 50px;
+    right: 30px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-transition: all .5s ease 0s;
+    -o-transition: all .5s ease 0s;
+    transition: all .5s ease 0s;
+    width: 50px;
+    border-radius: 50%;
+}
+#scrollUp::before{
+	position: absolute;
+	top: -35px;
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 50%;
+	content: attr(data-name);
+	width: 75px;
+	height: 30px;
+	background-color: orange;
+	text-align: center;
+	line-height: 30px;
+	font-weight: 700;
+	color: #fff;
+	opacity: 0;
+}
+#scrollUp::after {
+    position: absolute;
+	top: -7px;
+	left: 50%;
+	transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: orange;
+    width: 0;
+    height: 0;
+    content: "";
+    opacity: 0;
+        }
+#scrollUp:hover::before,
+#scrollUp:hover::after{
+	opacity: 1
+}
+#scrollUp:hover{
+	background: #444;
+}
+

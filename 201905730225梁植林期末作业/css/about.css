@@ -1,0 +1,204 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+header
+{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background: url(../images/ying.jpg), linear-gradient(45deg,#ff3479,#03A9F4);
+	/*混合模式/ie不支持*/
+	background-blend-mode: soft-light;
+	background-size: cover;
+	background-position: center;
+	border-left: 50px solid #fff;
+	border-right: 50px solid #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+header:before
+{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 40px;
+	display: block;
+	background: linear-gradient(-45deg, transparent 33.33%,#fff 33.33%, #fff 66.66%,transparent 66.66%),
+				linear-gradient(45deg, transparent 33.33%,#fff 33.33%, #fff 66.66%,transparent 66.66%);
+	background-size: 30px 60px;
+}
+header:after
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 40px;
+	display: block;
+	background: linear-gradient(-45deg, transparent 33.33%,#fff 33.33%, #fff 66.66%,transparent 66.66%),
+				linear-gradient(45deg, transparent 33.33%,#fff 33.33%, #fff 66.66%,transparent 66.66%);
+	background-size: 30px 60px;
+	transform: rotate(180deg);
+}
+header h2
+{
+	color: #fff;
+	font-size: 60px;
+	text-align: center;
+}
+
+
+/*文本区*/
+section,article，footer{
+	margin: 50px auto; 
+}
+section h2,article h2,footer h2
+{
+	color: #000;
+	font-size: 50px;
+	text-align: center;
+}
+ [class^="text-wrap"]{
+	width: 1000px;
+	height: 100%;
+	margin: 30px auto;
+	background: linear-gradient(45deg,#ff3479,#03A9F4);
+	text-align: left;
+	font-size: 25px;
+	color: white;
+	border-top: 5px dashed #ff3479;
+	border-right: 5px dashed #ff3479;
+	border-bottom: 5px dashed #03A9F4;
+	border-left: 5px dashed #03A9F4;
+}
+section .text-wrap1 span,
+article .text-wrap2 span,
+footer .text-wrap3 span{
+	display: inline-block;
+	margin: 10px 15px 15px 15px;
+}
+
+/*返回首页部分*/
+#scrollUp {
+    background: #f56970;
+    bottom: 50px;
+    color: #fff;
+    height: 50px;
+    line-height: 50px;
+    right: 30px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-transition: all .5s ease 0s;
+    -o-transition: all .5s ease 0s;
+    transition: all .5s ease 0s;
+    width: 50px;
+    border-radius: 50%;
+}
+#scrollUp::before{
+	position: absolute;
+	top: -35px;
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 50%;
+	content: attr(data-name);
+	width: 75px;
+	height: 30px;
+	background-color: orange;
+	text-align: center;
+	line-height: 30px;
+	font-weight: 700;
+	color: #fff;
+	opacity: 0;
+}
+#scrollUp::after {
+    position: absolute;
+	top: -7px;
+	left: 50%;
+	transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: orange;
+    width: 0;
+    height: 0;
+    content: "";
+    opacity: 0;
+        }
+#scrollUp:hover::before,
+#scrollUp:hover::after{
+	opacity: 1
+}
+#scrollUp:hover{
+  background: #444;
+}
+
+
+/*动画装饰部分*/
+.strip-loading {
+    display: flex;
+    margin: 0 auto;
+    width: 72px;
+    height: 30px;
+    list-style: none;
+}
+li {
+    border-radius: 3px;
+    width: 6px;
+    height: 30px;
+    animation: beat 1s ease-in-out infinite;
+}
+li:nth-child(odd){
+	background: linear-gradient(90deg,#03A9F4,#ff3479);
+}
+li:nth-child(even){
+	background: linear-gradient(90deg,#ff3479,#03A9F4);
+}
+li:nth-child(2) {
+    animation-delay: 200ms;
+}
+li:nth-child(3) {
+    animation-delay: 400ms;
+}
+li:nth-child(4) {
+    animation-delay: 600ms;
+}
+li:nth-child(5) {
+    animation-delay: 800ms;
+}
+li:nth-child(6) {
+    animation-delay: 1s;
+}
+li:nth-child(7) {
+    animation-delay: 1.02s;
+}
+li:nth-child(8) {
+    animation-delay: 1.4s;
+}
+li:nth-child(9) {
+    animation-delay: 1.6s;
+}
+li:nth-child(10) {
+    animation-delay: 1.8s;
+}
+li:nth-child(11) {
+    animation-delay: 2.0s;
+}
+li:nth-child(12) {
+    animation-delay: 2.2s;
+}
+
+
+@keyframes beat {
+    0%,
+    100% {
+        transform: scaleY(1);
+    }
+    50% {
+        transform: scaleY(.5);
+    }
+}

@@ -1,0 +1,305 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*图片区*/
+#header{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url(../images/slide-bg.png);
+  background-size: 160%;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.about_animate
+{
+  position: relative;
+  -webkit-box-reflect: below 1px linear-gradient(transparent,#0001);/*倒影(webkit内核浏览器支持)*/
+}
+.loader
+{
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 20px solid transparent;
+  border-bottom: 20px solid #06c8f0;
+  border-right: 20px solid #06c8f0;
+  transform: rotate(45deg);
+  animation: animate 4s ease-in-out infinite;
+}
+@keyframes animate
+{
+  0%
+  {
+    transform: rotate(0deg);
+  }
+  50%
+  {
+    transform: rotate(90deg);
+  }
+  100%
+  {
+    transform: rotate(0deg);
+  }
+}
+
+.loader .ball
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: animateBall 4s ease-in-out infinite;
+}
+.loader .ball:before
+{
+  content: '';
+  position: absolute;
+  bottom: 50%;
+  transform: translateY(-50%);
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 50%;
+}
+@keyframes animateBall
+{
+  0%
+  {
+    transform: rotate(0deg);
+  }
+  50%
+  {
+    transform: rotate(180deg);
+  }
+  100%
+  {
+    transform: rotate(0deg);
+  }
+}
+.tips_text:before{
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  content: '您有哪些真心话要说吗，请往下滑动发表哦~';
+  font-family: kaiti;
+  color: white;
+  font-size: 55px;
+}
+
+/*表单区*/
+section{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  padding: 100px;
+  color: #111;
+}
+section .imgBx{
+  position: relative;
+  width: 50%;
+  height: 100%;
+}
+section .imgBx:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  /*mix-blend-mode: screen;ie浏览器不支持*/
+}
+section .imgBx img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+section .contentBx{
+  display: flex;
+  width: 50%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.formBx {
+  width: 50%;
+}
+.formBx h2{
+  color: #607d8b;
+  font-weight: 600;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+  border-bottom: 4px solid #ff4584;
+  display: inline-block;
+  letter-spacing: 1px;
+}
+
+.formBx .inputBox{
+    position: relative;
+    width: 300px;
+    height: 46px;
+    margin-bottom: 30px;
+}
+.formBx .inputBox textarea{
+    margin-bottom: 30px;
+    resize: none;
+    overflow: auto;
+}
+.formBx .inputBox input,
+.formBx .inputBox textarea{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border: 1px solid #111;
+    background: transparent;
+    padding: 10px;
+    border-radius: 30px;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 16px;
+    color: #111;
+    font-weight: 300;
+}
+.formBx .inputBox span{
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    display: inline-block;
+    padding: 10px;
+    font-size: 16px;
+    color: #111;
+    font-weight: 300;
+    transition: 0.5s;
+    pointer-events: none;
+}
+.formBx .inputBox input:focus ~ span,
+.formBx .inputBox input:valid ~ span
+{
+    font-size: 12px;
+    color: #111;
+    transform: translateX(-10px) translateY(-32px);
+}
+.formBx .inputBx 
+{
+  width: 300px;
+  margin-bottom: 15px;
+}
+.formBx .inputBx span
+{
+  font-size: 16px;
+  margin-bottom: 5px;
+  display: inline-block;
+  color: #607d8b;
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+.formBx .inputBx input
+{
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  font-weight: 400;
+  border: 1px solid #607d8b;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #607d8b;
+  background: transparent;
+  border-radius: 30px;
+  margin-top: 10px;
+}
+.formBx .inputBx input[type="submit"]
+{
+  background: #ff4584;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 30px;
+}
+.formBx .remember
+{
+  margin-top: 70px;
+  color: #607d8b;
+  font-weight: 400;
+  font-size: 14px;
+}
+.formBx .inputBx p
+{
+  color: #607d8b;
+}
+.formBx .inputBx a
+{
+  color: #ff4584;
+}
+
+/*返回首页部分*/
+#scrollUp {
+    background: #f56970;
+    bottom: 50px;
+    color: #fff;
+    height: 50px;
+    line-height: 50px;
+    right: 30px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-transition: all .5s ease 0s;
+    -o-transition: all .5s ease 0s;
+    transition: all .5s ease 0s;
+    width: 50px;
+    border-radius: 50%;
+}
+#scrollUp:hover{
+  background: #444;
+}
+#scrollUp::before{
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  content: attr(data-name);
+  width: 75px;
+  height: 30px;
+  background-color: orange;
+  text-align: center;
+  line-height: 30px;
+  font-weight: 700;
+  color: #fff;
+  opacity: 0;
+}
+#scrollUp::after {
+    position: absolute;
+  top: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: orange;
+    width: 0;
+    height: 0;
+    content: "";
+    opacity: 0;
+        }
+#scrollUp:hover::before,
+#scrollUp:hover::after{
+  opacity: 1
+}
